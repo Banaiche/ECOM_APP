@@ -46,8 +46,13 @@ public class InventoryServiceApplication {
                     .build());
 
             productRepository.findAll().forEach(
-                    product -> {
-                        product.toString();
+                    customer -> {
+                        System.out.println("============================");
+                        System.out.println(customer.getId());
+                        System.out.println(customer.getName());
+                        System.out.println(customer.getPrice());
+                        System.out.println(customer.getQuantity());
+                        System.out.println("============================");
                     }
             );
         };
