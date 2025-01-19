@@ -1,13 +1,16 @@
 package ma.banaiche.customerservice;
 
+import ma.banaiche.customerservice.config.CustomerConfigParams;
 import ma.banaiche.customerservice.entities.Customer;
 import ma.banaiche.customerservice.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableConfigurationProperties(CustomerConfigParams.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
